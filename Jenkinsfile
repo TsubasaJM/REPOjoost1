@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Health check') {
             steps {
-                timeout(time: 8, unit: 'SECONDS') {
+                timeout(time: 10, unit: 'SECONDS') {
                     sh './health-check.sh'
                 }
             }
