@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sleep 9
+sleep 1
 echo "Dit is OK"
 exit 0
