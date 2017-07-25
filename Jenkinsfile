@@ -1,6 +1,8 @@
 pipeline {
-    agent {
-        docker { image 'node:7-alpine' }
+    agent any
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
     }
     stages {
         stage('Build') {
@@ -12,7 +14,7 @@ pipeline {
             steps {
                 retry(3) {
                     // sh './flakey-deploy.sh'
-                    sh 'node --version'
+                    sh 'printenv'
                 }
             }
         }
