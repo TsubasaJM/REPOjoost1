@@ -29,6 +29,7 @@ pipeline {
     post {
         always {
             // echo 'This will always run'
+            archive 'build/libs/**/*.jar'
             junit 'build/reports/**/*.xml'
         }
         success {
